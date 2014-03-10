@@ -1,0 +1,53 @@
+//- extends layout
+//- block content
+//- 	#wrap.text-center
+//- 		br
+//- 		button.btn.btn-primary.btn-lg(data-toggle='modal', 
+//- 			data-target='#myModal')
+//- 			| Sign in
+//- 	#myModal.modal.fade(tabindex='-1', role='dialog', 
+//- 		aria-labelledby='myModalLabel')
+//- 		.container
+//- 			.row
+//- 				.col-sm-6.col-sm-offset-3.text-center
+//- 					h1 UserId:
+//- 					h2 random text-center
+//- 					h4 click anywhere
+
+extends layout
+
+block content
+    .container
+        .row
+            .col-md-4.col-md-offset-7
+                .panel.panel-default
+                    .panel-heading
+                        //.glyphicon.glyphicon-lock
+                        |Login
+                    .panel-body
+                        form.form-horizontal(role='form')
+                            .form-group
+                                //label.col-sm-3.control-label(for='inputEmail3')
+                                .col-sm-12
+                                    input#userName.form-control(
+                                     placeholder='UserName', required)
+                            .form-group
+                                //label.col-sm-3.control-label(for='inputPassword3')
+                                .col-sm-12
+                                    input#password.form-control(type='password',
+                                        placeholder='Password', required)
+                            .form-group
+                                .col-sm-12
+                                    .checkbox
+                                        label
+                                            input(type='checkbox')
+                                            | Remember me
+                            .form-group.last
+                                .col-sm-offset-2.col-sm-3
+                                    button.btn.btn-success.btn-sm(type='submit')|Sign in
+                                .col-sm-offset-1.col-sm-3
+                                    button.btn.btn-primary.btn-sm(type='reset')|Reset
+                    .panel-footer
+                        | Not Registered?
+                        a(href='#')
+                        | Register here
